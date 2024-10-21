@@ -22,6 +22,13 @@ class pr001 {
 		//Вецественные типы
 		float f;//32 бит
 		double dd;//64 бит
+		sh = b;
+		b =(byte)sh;
+		dd = 1.5;
+		intg =(int)dd;
+		dd = (double)intg/3;
+		f = intg;
+		System.out.println(intg + " " + dd);
 		//Символьный тип данных
 		char ch;//16 бит
 		ch = 'А';
@@ -30,9 +37,15 @@ class pr001 {
 			System.out.print(ch++ + " ");
 		System.out.println();
 		//Логический тип
-		boolean bool;//
+		boolean bool, bool2 = true;
 		bool = true;
-		bool = false;
+		System.out.println(!bool);
+		System.out.println(bool && bool2);
+		System.out.println(bool || bool2);
+		System.out.println(bool ^ bool2);
+		System.out.println("Перевод строки\n" + "Табуляция\t" + "\"Кавычки\" в строке" + (!bool & (bool2 | bool)));
+		ch = '\'';
+			
 		
 
 	}
