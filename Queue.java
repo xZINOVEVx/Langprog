@@ -1,6 +1,6 @@
 class Queue {
-	char[] q;
-	int putloc, getloc; //указатели на индекс для помещение и извлечение символов
+	private char[] q;
+	private int putloc, getloc; //указатели на индекс для помещение и извлечение символов
 	Queue(int size) {
 		q = new char[size];//выделяем память под нужную очередь нужного размера
 		putloc=getloc=0;
@@ -29,11 +29,11 @@ class QDemo {
 		char ch;
 		int i;
 
-		System.out.println("Сохраняем алфавит в очередь bigQ");
+		System.out.print("Сохраняем алфавит в очередь bigQ");
 		for(i = 0; i < 26; i++)
 			bigQ.put((char) ('A' + i));
 
-		System.out.println("Содержание очереди bigQ: ");
+		System.out.print("Содержание очереди bigQ: ");
 		for(i = 0; i < 26; i++) {
 			ch = bigQ.get();
 			if(ch != (char) 0)
@@ -42,7 +42,7 @@ class QDemo {
 		System.out.println("\n");
 		System.out.println("Сохраняем символы очереди smallQ");
 		for(i = 0; i < 5; i++) {
-			System.out.println("Попытка сохранения " + (char) ('Z' - i));
+			System.out.print("Попытка сохранения " + (char) ('Z' - i));
 			smallQ.put((char) ('Z' - i));
 			System.out.println();
 		}
@@ -50,8 +50,12 @@ class QDemo {
 		for(i = 0;i < 5; i++) {
 			ch = smallQ.get();
 			if(ch !=(char)0)
-				System.out.println(ch);
+				System.out.print(ch);
 		}
 		System.out.println();
+		
+		//Попытка доступа к закрытым переменным класса Queue
+		//bigQ.q[3] = 343;
+		//bigQ.putloc = 3;
 	}
 }
