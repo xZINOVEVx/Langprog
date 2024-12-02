@@ -1,9 +1,11 @@
 import java.util.Random;
-class ShowBits {
-	int numbits;
-	ShowBits(int n) {
-		numbits = n;
-	}
+class Bits {
+	public static void main(String[] args) {
+		class ShowBits {
+			int numbits;
+			ShowBits(int n) {
+			numbits = n;
+			}
 	void show(long val) {
 		long mask = 1;
 
@@ -18,13 +20,22 @@ class ShowBits {
 			if((spacer % 8) == 0) {
 				System.out.print(" ");
 				spacer = 0;
+				}	
 			}
+			System.out.println();
+		  }
 		}
-		System.out.println();
+		for(byte b = 0; b < 10; b++) {
+			ShowBits byteval = new ShowBits(8);
+			System.out.print(b + " в двоичном виде: ");
+			byteval.show(b);	
+		}
 	}
 }
-class Bits { 
+/*
+class Bits2 { 
 	public static void main(String[] args) {
+		//Сброс 6-го бита - изменение регистра латиницы
 		char ch;
 		System.out.println("Преобразование букв из нижнего регистра в верхний");
 		for(int i=0; i<26; i++) {
@@ -158,3 +169,4 @@ class Bits {
 		
 	}
 }
+*/
