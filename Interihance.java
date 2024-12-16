@@ -199,6 +199,7 @@ class Interihance {
 	t1 = t2;
 	System.out.println("Обьекты t1 и t2 эквиваленты: " + t1.equals(t2));
 	
+		
 
 	}
 }
